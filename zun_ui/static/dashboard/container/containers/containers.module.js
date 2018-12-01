@@ -159,6 +159,7 @@
   function containerProperties() {
     return {
       'addresses': { label: gettext('Addresses'), filters: ['noValue', 'json'] },
+      'privileged': { label: gettext('privileged'), filters: ['yesno'] },
       'auto_heal': { label: gettext('Auto Heal'), filters: ['yesno'] },
       'auto_remove': { label: gettext('Auto Remove'), filters: ['yesno'] },
       'command': { label: gettext('Command'), filters: ['noValue'] },
