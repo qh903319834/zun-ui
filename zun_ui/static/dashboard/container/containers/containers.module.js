@@ -116,12 +116,20 @@
       priority: 3
     })
     .append({
+      id: 'numa_topology',
+      priority: 2
+    })
+    .append({
+      id: 'host',
+      priority: 2
+    })
+    .append({
       id: 'cpu',
-      priority: 3
+      priority: 2
     })
     .append({
       id: 'memory',
-      priority: 3,
+      priority: 2
     })
     .append({
       id: 'image',
@@ -129,10 +137,6 @@
     })
     .append({
       id: 'status',
-      priority: 2
-    })
-    .append({
-      id: 'numa_topology',
       priority: 2
     })
     .append({
@@ -149,6 +153,16 @@
     .append({
       'label': gettext('ID'),
       'name': 'id',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('NUMA Topology'),
+      'name': 'numa_topology',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('Host'),
+      'name': 'host',
       'singleton': true
     })
     .append({
@@ -169,11 +183,6 @@
     .append({
       'label': gettext('Status'),
       'name': 'status',
-      'singleton': true
-    })
-    .append({
-      'label': gettext('NUMA Topology'),
-      'name': 'numa_topology',
       'singleton': true
     })
     .append({
