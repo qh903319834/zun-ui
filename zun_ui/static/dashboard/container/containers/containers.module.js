@@ -116,10 +116,6 @@
       priority: 3
     })
     .append({
-      id: 'numa_topology',
-      priority: 2
-    })
-    .append({
       id: 'host',
       priority: 2
     })
@@ -153,11 +149,6 @@
     .append({
       'label': gettext('ID'),
       'name': 'id',
-      'singleton': true
-    })
-    .append({
-      'label': gettext('NUMA Topology'),
-      'name': 'numa_topology',
       'singleton': true
     })
     .append({
