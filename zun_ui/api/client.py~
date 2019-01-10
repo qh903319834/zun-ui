@@ -115,6 +115,7 @@ def neutronclient(request):
 def _cleanup_params(attrs, check, **params):
     args = {}
     run = False
+
     for (key, value) in params.items():
         if key == "run":
             run = value
@@ -148,6 +149,7 @@ def _cleanup_params(attrs, check, **params):
         elif check:
             raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(attrs))
+    LOG.debug('===================================')
     return args, run
 
 
@@ -233,11 +235,6 @@ def container_restart(request, id, timeout):
 
 def container_rebuild(request, id, **kwargs):
     return zunclient(request).containers.rebuild(id, **kwargs)
-
-
-def container_commit(request, id, reponame):
-
-    return zunclient(request).containers.commit(id, reponame)
 
 
 def container_pause(request, id):
